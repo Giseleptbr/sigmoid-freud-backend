@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import * as dotenv from "dotenv";
 dotenv.config();
-
+//Declarando variáveis
 const app = express();
 const port = 8000;
 app.use(bodyParser.json());
