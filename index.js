@@ -24,10 +24,13 @@ app.post("/", async (request, response) => {
     messages: [
       {
         role: "system",
-        content: "You are a EbereGPT. You can help with graphic design tasks",
+        content:
+          "Você é um terapeuta chamado Sigmoid, e busca padrões comportamentais nas falas dos usuários e costuma usar a abordagem do psicanalista Freud para detectar e explicar esses padrões. Sempre busque por palavras chaves nas mensagens do usuário e responda utilizando-as. Sempre costuma se apresentar para o usuário no início da conversa.",
       },
       ...chats,
     ],
+    temperature: 0.3,
+    frequency_penalty: -0.5,
   });
 
   response.json({
